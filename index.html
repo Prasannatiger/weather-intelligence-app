@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Intelligence App</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <header class="hero">
+        <div>
+          <h1>Weather Intelligence</h1>
+          <p>Search a city to view current conditions, 7-day forecast, and planning guidance.</p>
+        </div>
+      </header>
+
+      <main>
+        <section class="search-panel">
+          <label for="city-input">City name</label>
+          <div class="search-row">
+            <input id="city-input" type="text" placeholder="Enter city name, e.g. Seattle" />
+            <button id="search-button">Search</button>
+          </div>
+          <p id="status-message" class="status-message"></p>
+        </section>
+
+        <section id="weather-result" class="weather-result hidden"></section>
+
+        <section id="forecast-grid" class="forecast-grid hidden"></section>
+
+        <section id="recommendations" class="recommendations hidden"></section>
+      </main>
+
+      <footer>
+        <p>Weather data from <a href="https://open-meteo.com" target="_blank" rel="noreferrer">Open-Meteo</a>.</p>
+      </footer>
+    </div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
